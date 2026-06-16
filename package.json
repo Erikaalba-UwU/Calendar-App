@@ -1,0 +1,38 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "Calendar App built with Electron",
+  "author": "Erika Alba",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --win"
+  },
+  "dependencies": {
+    "npm": "^11.17.0",
+    "run": "^1.5.0"
+  },
+  "devDependencies": {
+  "electron": "^42.0.0",
+  "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.erikaalba.calendarapp",
+    "productName": "Calendar App",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "images/App-ICON.ico"
+    },
+    "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  }
+  }
+  
+}
